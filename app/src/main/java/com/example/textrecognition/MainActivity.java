@@ -32,6 +32,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import org.w3c.dom.Text;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -154,14 +155,14 @@ public class MainActivity extends AppCompatActivity {
 
 
                 //nyari NIE doang
-//                String NIE_text = text.replaceAll("[^0-9]","");
-//                StringBuilder textNIE = new StringBuilder(NIE_text);
-//                //coba get Tahun, jangan pake angka 202
-//                int year = Calendar.getInstance().get(Calendar.YEAR);
-//                String tahun = String.valueOf(year);
-//                int a = textNIE.indexOf(tahun);
+                String NIE_text = text.replaceAll("[^0-9]","");
+                StringBuilder textNIE = new StringBuilder(NIE_text);
+                //coba get Tahun, jangan pake angka 202
+                int year = Calendar.getInstance().get(Calendar.YEAR);
+                String tahun = String.valueOf(year);
+                int a = textNIE.indexOf(tahun);
 
-//                textview1.setText("NIE : " + NIE_text.substring(a,a+11));
+                textView.setText("NIE : " + NIE_text.substring(a,a+11));
             }
         }
     }
